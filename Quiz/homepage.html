@@ -3,82 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Quiz APP</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favIcon/myFavIcon.ico">
-    <script src="https://kit.fontawesome.com/a5e51ce083.js" crossorigin="anonymous"></script>
-    <style>
-        html, body {
-            height: 100%; /* Ensures the body takes up the full height of the viewport */
-            margin: 0; /* Removes default margin */
-            font-family: 'Poppins', sans-serif; /* Sets a default font */
-        }
-
-        #home-page {
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            display: flex; /* Allows for flexible positioning of child elements */
-            flex-direction: column; /* Stacks children vertically */
-            align-items: center; /* Centers children horizontally */
-            justify-content: center; /* Centers children vertically */
-            background: #001e4d; /* Background color */
-            color: #D3D3D3; /* Text color */
-            text-align: center; /* Centers text */
-        }
-
-        #home-title {
-            font-weight: 800;
-            font-size: 60px; /* Adjusted for better visibility */
-        }
-
-        #home-text {
-            font-size: 20px; /* Adjusted font size */
-            margin: 20px 0; /* Spacing around the text */
-            font-style: italic; /* Italic style for emphasis */
-        }
-
-        #start-btn {
-            font-weight: 500;
-            width: 50%; /* Full width of the button */
-            max-width: 200px; /* Maximum width for better appearance */
-            border: 1px solid #222;
-            padding: 10px;
-            margin: 10px auto;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-            background: #D3D3D3; /* Button background */
-            color: #001e4d; /* Button text color */
-        }
-
-        #start-btn:hover {
-            background:#ff0000; /* Darker background on hover */
-            color:#000000; /* White text on hover */
-        }
-        #copy-right {
-           position: fixed;
-           left: 50%;
-           bottom: 10px;
-           transform: translateX(-50%);
-           text-align: center;
-           width: 100%;
-        }
-    </style>
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <div id="home-page">
-        <h1 id="home-title"><i class="fa-solid fa-hourglass-half"></i>1 minute Quiz!</h1>
-        <p id="home-text">Test your knowledge and see how many questions you can answer in just 60 seconds.</p>
-        <button id="start-btn" >START</button>
-        
-       
+    <div class="app">
+        <p id="timer">Time Remaining: <span id="time">10</span> seconds</p>
+        <h1>Simple Quiz</h1>
+        <div class="quiz">
+            <h2 id="question">Question goes here</h2>
+            <div id="answer-buttons"></div>
+            <button  id="next-btn">Next</button>
+        </div>
         <div id="copy-right">&copy;<em>FetuTechTamer!</em></div>
     </div>
-
-    <script>
-        document.getElementById("start-btn").addEventListener("click", function() {
-            window.location.href = "index.html"; // Change this to your target file
-        });
-    </script>
 </body>
 </html>
