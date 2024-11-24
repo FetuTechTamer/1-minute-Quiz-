@@ -48,3 +48,37 @@
             cursor: pointer;
             transition: all 0.3s;
             background: #D3D3D3; /* Button background */
+             color: #001e4d; /* Button text color */
+        }
+
+        #start-btn:hover {
+            background:#ff0000; /* Darker background on hover */
+            color:#000000; /* White text on hover */
+        }
+        #copy-right {
+           position: fixed;
+           left: 50%;
+           bottom: 10px;
+           transform: translateX(-50%);
+           text-align: center;
+           width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="home-page">
+        <h1 id="home-title"><i class="fa-solid fa-hourglass-half"></i>1 minute Quiz!</h1>
+        <p id="home-text">Test your knowledge and see how many questions you can answer in just 60 seconds.</p>
+        <button id="start-btn" >START</button>
+        
+       
+        <div id="copy-right">&copy;<em>FetuTechTamer!</em></div>
+    </div>
+
+    <script>
+        document.getElementById("start-btn").addEventListener("click", function() {
+            window.location.href = "index.html"; // Change this to your target file
+        });
+    </script>
+</body>
+</html>
